@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/11.0.1" fx:controller="com.gb.cs.client.Controller">
+
+    <HBox fx:id="hboxTop" fillHeight="true" visible="true" VBox.vgrow="ALWAYS">
+        <VBox fx:id="leftVbox" VBox.vgrow="ALWAYS">
+            <ListView fx:id="clientView" />
+        </VBox>
+        <VBox fx:id="center" alignment="CENTER" minWidth="40" VBox.vgrow="ALWAYS">
+            <Button text="&gt;" VBox.vgrow="ALWAYS" />
+            <Button text="&lt;" VBox.vgrow="ALWAYS" />
+        </VBox>
+        <VBox fx:id="rightVbox">
+            <ListView fx:id="rightFiles" editable="false" VBox.vgrow="ALWAYS" />
+        </VBox>
+    </HBox>
+    <HBox fx:id="bottom" visible="true">
+        <TextField fx:id="message" HBox.hgrow="ALWAYS" />
+        <Button text="Send" />
+    </HBox>
+</VBox>

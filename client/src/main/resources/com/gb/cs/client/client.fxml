@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<VBox xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.gb.cs.client.Controller">
+<!--    <VBox fx:id="loginPane" alignment="CENTER">-->
+<!--        <TextField fx:id="loginField" maxWidth="200" minWidth="150" text="login" />-->
+<!--        <TextField fx:id="password" maxWidth="200" minWidth="150" prefWidth="200" text="password" />-->
+<!--        <Button fx:id="bLogin" minWidth="150" onAction="#login" text="Enter" />-->
+<!--    </VBox>-->
+    <HBox fx:id="hboxTop" fillHeight="true" visible="true" VBox.vgrow="ALWAYS">
+        <VBox fx:id="leftVbox" HBox.hgrow="ALWAYS" VBox.vgrow="ALWAYS">
+            <ListView fx:id="serverView" VBox.vgrow="ALWAYS" onMouseClicked="#onMouseClicked">
+            <padding>
+               <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+            </padding></ListView>
+        </VBox>
+        <VBox fx:id="center" alignment="CENTER" minWidth="40" VBox.vgrow="ALWAYS">
+            <Button fx:id="send" contentDisplay="CENTER" text="&gt;" textAlignment="CENTER" VBox.vgrow="ALWAYS">
+            <VBox.margin>
+               <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+            </VBox.margin>
+            <font>
+               <Font size="14.0" />
+            </font></Button>
+            <Button fx:id="retrieve" contentDisplay="CENTER" text="&lt;" textAlignment="CENTER" VBox.vgrow="ALWAYS">
+            <VBox.margin>
+               <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+            </VBox.margin>
+            <font>
+               <Font size="14.0" />
+            </font></Button>
+        </VBox>
+        <VBox fx:id="rightVbox" HBox.hgrow="ALWAYS">
+            <ListView fx:id="clientView"  VBox.vgrow="ALWAYS" onMouseClicked="#onMouseClicked">
+            <padding>
+               <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+            </padding></ListView>
+        </VBox>
+      <padding>
+         <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+      </padding>
+    </HBox>
+    <HBox fx:id="bottom" visible="true">
+        <TextField fx:id="message" HBox.hgrow="ALWAYS" />
+        <Button text="Send" />
+      <padding>
+         <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+      </padding>
+    </HBox>
+</VBox>
